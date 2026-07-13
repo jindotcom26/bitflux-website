@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BITFLUX · 把加密货币变成可花的钱</title>
+  <meta name="description" content="BITFLUX 是一站式加密与法币账户：多币种钱包、外汇兑换、BF Card 银行卡、全球法币提现与多链充提。" />
+  <meta name="theme-color" content="#0A0907" />
+  <link rel="icon" type="image/png" href="assets/bitflux-favicon.png" />
+  <meta property="og:title" content="BITFLUX · 把加密货币变成可花的钱" />
+  <meta property="og:description" content="多币种钱包 · 外汇兑换 · BF Card · 全球法币提现 · 多链充提" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260707c" />
+</head>
+<body class="page-home">
+  <!-- ===== SVG icon sprite ===== -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v0H5.5"/><path d="M3 7.5V18a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H4"/><circle cx="16.5" cy="13.5" r="1.2"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9.5h18"/><path d="M7 14.5h4"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 4 11 14"/><path d="M21 4 14.5 20l-3.5-6L5 10.5 21 4Z"/></symbol>
+    <symbol id="i-deposit" viewBox="0 0 24 24"><path d="M12 3v11"/><path d="m8 10 4 4 4-4"/><path d="M5 19h14"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M4 13h16M12 9v11"/><path d="M12 9c-1.5-3-5-3-5-1 0 1.5 2 2 5 2 3 0 5-.5 5-2 0-2-3.5-2-5 1Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-earn" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="i-invest" viewBox="0 0 24 24"><path d="M21 12A9 9 0 1 1 12 3"/><path d="M12 3a9 9 0 0 1 9 9h-9V3Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  </svg>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="BITFLUX"><img src="assets/bitflux-logo.png" alt="BITFLUX" /></a>
+      <div class="nav-links">
+        <a href="features.html" data-i18n="nav_features">功能</a>
+        <a href="card.html" data-i18n="nav_card">BF Card</a>
+        <a href="features.html#security" data-i18n="nav_security">安全</a>
+        <a href="features.html#referral" data-i18n="nav_referral">邀请</a>
+        <a href="features.html#faq" data-i18n="nav_faq">常见问题</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <a class="btn btn-ghost" href="https://x.com/bitfluxcard" target="_blank" rel="noopener">Twitter</a>
+        <a class="btn btn-primary" href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="nav_cta">开始使用</a>
+      </div>
+      <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="features.html" data-i18n="nav_features">功能</a>
+      <a href="card.html" data-i18n="nav_card">BF Card</a>
+      <a href="features.html#security" data-i18n="nav_security">安全</a>
+      <a href="features.html#referral" data-i18n="nav_referral">邀请</a>
+      <a href="features.html#faq" data-i18n="nav_faq">常见问题</a>
+      <a class="btn btn-primary" href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="nav_cta">开始使用</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- ===== HERO (minimal · spinning coin) ===== -->
+    <section class="hero-min">
+      <div class="hero-min-bg" aria-hidden="true">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="grid-lines"></div>
+        <!-- 3D spinning gold coin -->
+        <div class="coin-stage">
+          <div class="coin">
+            <div class="coin-face coin-front"><img src="assets/bitflux-icon.png" alt="" /></div>
+            <div class="coin-face coin-back"><span>₿</span></div>
+            <div class="coin-edge"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-min-inner">
+        <span class="pill"><span class="pill-dot"></span><span data-i18n="hero_pill">加密 × 法币 · 一个账户</span></span>
+        <h1 class="hero-min-title"><span data-i18n="hero_title_1">把加密货币</span><br /><span class="gold" data-i18n="hero_title_2">变成可花的钱</span></h1>
+        <p class="hero-min-sub" data-i18n="hero_sub">一个账户，完成兑换、消费与提现。</p>
+        <div class="hero-min-cta">
+          <a class="btn btn-primary btn-lg" href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="hero_cta1">立即开户</a>
+          <a class="btn btn-ghost btn-lg" href="features.html" data-i18n="hero_cta2">了解更多</a>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>USDT</span><span class="dot">•</span><span>USDC</span><span class="dot">•</span><span>BTC</span><span class="dot">•</span><span>ETH</span><span class="dot">•</span><span>ERC20</span><span class="dot">•</span><span>BEP20</span><span class="dot">•</span><span>TRC20</span><span class="dot">•</span><span>Polygon</span><span class="dot">•</span>
+          <span>USDT</span><span class="dot">•</span><span>USDC</span><span class="dot">•</span><span>BTC</span><span class="dot">•</span><span>ETH</span><span class="dot">•</span><span>ERC20</span><span class="dot">•</span><span>BEP20</span><span class="dot">•</span><span>TRC20</span><span class="dot">•</span><span>Polygon</span><span class="dot">•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HIGHLIGHTS (compact) ===== -->
+    <section class="section section-tight">
+      <div class="container">
+        <div class="highlight-row">
+          <a class="hl reveal" href="features.html">
+            <div class="hl-ico"><svg class="ico"><use href="#i-wallet"/></svg></div>
+            <h3 data-i18n="hl1_t">多币种钱包</h3>
+            <p data-i18n="hl1_d">USDT · USD · BTC · ETH · USDC</p>
+          </a>
+          <a class="hl reveal" href="features.html">
+            <div class="hl-ico"><svg class="ico"><use href="#i-swap"/></svg></div>
+            <h3 data-i18n="hl2_t">外汇兑换</h3>
+            <p data-i18n="hl2_d">秒级到账，汇率透明</p>
+          </a>
+          <a class="hl reveal" href="card.html">
+            <div class="hl-ico"><svg class="ico"><use href="#i-card"/></svg></div>
+            <h3 data-i18n="hl3_t">BF Card</h3>
+            <p data-i18n="hl3_d">虚拟卡 / 实体卡</p>
+          </a>
+          <a class="hl reveal" href="features.html">
+            <div class="hl-ico"><svg class="ico"><use href="#i-send"/></svg></div>
+            <h3 data-i18n="hl4_t">全球提现</h3>
+            <p data-i18n="hl4_d">USD · SGD · HKD · GBP · EUR</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCT SUITE (full product line) ===== -->
+    <section class="section" id="suite">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="ps_eyebrow">完整产品线</span>
+          <h2 class="section-title" data-i18n="ps_title">一个账户，覆盖资金的每一步</h2>
+          <p class="section-lead" data-i18n="ps_lead">存、兑、花、转、赚、投——把全球金融能力，装进一个 App。</p>
+        </div>
+        <div class="bento">
+          <!-- BF Pay — send-money demo (tall) -->
+          <div class="bx bx-pay reveal">
+            <span class="bx-pill"><svg class="ico"><use href="#i-send"/></svg>BF Pay</span>
+            <h3 data-i18n="bxp_t">全球转账，秒级到账</h3>
+            <p class="bx-sub" data-i18n="bxp_s">提现转账至全球银行账户 · USD · SGD · HKD · GBP · EUR</p>
+            <div class="bx-amt" aria-hidden="true">$1,000<small>.00 USD</small></div>
+            <div class="bx-form" aria-hidden="true">
+              <div class="bx-field"><span data-i18n="bxp_from">从</span><b><i data-i18n="bxp_from_v">香港</i> ▾</b></div>
+              <div class="bx-field"><span data-i18n="bxp_to">到</span><b><i data-i18n="bxp_to_v">新加坡</i> ▾</b></div>
+              <div class="bx-btn" data-i18n="bxp_btn">立即转账</div>
+            </div>
+          </div>
+          <!-- BF Swap — gold accent card -->
+          <div class="bx bx-swap reveal">
+            <span class="bx-pill"><svg class="ico"><use href="#i-swap"/></svg>BF Swap</span>
+            <h3 data-i18n="bxs_t">加密 ⇄ 法币</h3>
+            <p class="bx-sub" data-i18n="bxs_s">一键互换 · 汇率透明</p>
+            <div class="bx-big" aria-hidden="true">1,250<small>.00</small></div>
+            <div class="bx-cap" data-i18n="bxs_cap">USDT → USD · 秒级到账</div>
+          </div>
+          <!-- BF Wallet — asset donut -->
+          <div class="bx bx-wallet reveal">
+            <span class="bx-pill"><svg class="ico"><use href="#i-wallet"/></svg>BF Wallet</span>
+            <div class="donut" aria-hidden="true">
+              <svg viewBox="0 0 150 150" width="150" height="150">
+                <circle cx="75" cy="75" r="60" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="14"/>
+                <circle cx="75" cy="75" r="60" fill="none" stroke="#C8A35B" stroke-width="14" stroke-linecap="round" stroke-dasharray="216 377"/>
+                <circle cx="75" cy="75" r="60" fill="none" stroke="#EAD9A8" stroke-width="14" stroke-linecap="round" stroke-dasharray="72 377" stroke-dashoffset="-230"/>
+                <circle cx="75" cy="75" r="60" fill="none" stroke="#8A6D2E" stroke-width="14" stroke-linecap="round" stroke-dasharray="50 377" stroke-dashoffset="-316"/>
+              </svg>
+              <div class="donut-center"><b>5+</b><span data-i18n="bxw_c">币种</span></div>
+            </div>
+            <h3 data-i18n="bxw_t">多币种钱包</h3>
+            <p class="bx-sub" data-i18n="bxw_s">USDT · USD · BTC · ETH · USDC</p>
+          </div>
+          <!-- BF Card — real-looking mini card -->
+          <div class="bx bx-card reveal">
+            <span class="bx-pill"><svg class="ico"><use href="#i-card"/></svg>BF Card</span>
+            <h3 data-i18n="bxc_t">随处可刷</h3>
+            <p class="bx-sub" data-i18n="bxc_q">基于 Visa 网络，全球数千万商户线上线下受理。</p>
+            <img class="bx-cardimg" src="assets/cards/card-gold.png" alt="BITFLUX BF Card · Visa Platinum" loading="lazy" />
+          </div>
+          <!-- BF Earn — coin stack -->
+          <div class="bx bx-earn reveal">
+            <span class="bx-pill"><svg class="ico"><use href="#i-earn"/></svg>BF Earn</span>
+            <div class="coin-row" aria-hidden="true">
+              <span class="coin-chip">₮</span><span class="coin-chip">$</span><span class="coin-chip">₿</span><span class="coin-chip">Ξ</span>
+            </div>
+            <h3 data-i18n="bxe_t">让闲置资产为你工作</h3>
+            <p class="bx-sub" data-i18n="bxe_s">灵活存取 · 收益透明可查</p>
+          </div>
+          <!-- BF Invest — wide statement band -->
+          <div class="bx bx-invest reveal">
+            <div class="bxi-copy">
+              <span class="bx-pill"><svg class="ico"><use href="#i-invest"/></svg>BF Invest</span>
+              <h3 data-i18n="bxi_t">财富，青睐有准备的人</h3>
+              <p class="bx-sub" data-i18n="bxi_s">一站式投资入口，轻松配置加密与多元优质资产。</p>
+            </div>
+            <div class="bxi-stat" aria-hidden="true">
+              <span data-i18n="bxi_stat_l">累计收益 · 示例</span>
+              <b>$10,333.50</b>
+              <em>+23.4%</em>
+            </div>
+          </div>
+        </div>
+        <p class="suite-note reveal" data-i18n="ps_note">* 产品功能分阶段开放，以 App 内实际上线为准；页面数字为界面示例。</p>
+      </div>
+    </section>
+
+    <!-- ===== CARD SHOWCASE (real images) ===== -->
+    <section class="section section-alt" id="card-teaser">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="card_eyebrow">BF Card</span>
+          <h2 class="section-title" data-i18n="card_title">随行生活，自在掌控</h2>
+          <p class="section-lead" data-i18n="card_lead">把余额变成消费力——三款卡面，由你选择。</p>
+        </div>
+        <div class="card-show reveal">
+          <div class="card-show-item"><img src="assets/cards/card-gold.png" alt="BITFLUX Golden Card" loading="lazy" /></div>
+          <div class="card-show-item"><img src="assets/cards/card-black.png" alt="BITFLUX Black Card" loading="lazy" /></div>
+          <div class="card-show-item"><img src="assets/cards/card-blue.png" alt="BITFLUX Blue Card" loading="lazy" /></div>
+        </div>
+        <div class="center-cta reveal">
+          <a class="btn btn-ghost btn-lg" href="card.html" data-i18n="card_more">查看 BF Card 详情 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS (4 simple steps) ===== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="hw_eyebrow">简单四步</span>
+          <h2 class="section-title" data-i18n="hw_title">几分钟，开启你的全球账户</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <h3 data-i18n="hw1_t">注册开户</h3>
+            <p data-i18n="hw1_d">手机或邮箱注册，按引导几分钟完成身份认证。</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <h3 data-i18n="hw2_t">充值入金</h3>
+            <p data-i18n="hw2_d">多链充值加密资产，扫码即可收款，汇入同一余额。</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <h3 data-i18n="hw3_t">一键兑换</h3>
+            <p data-i18n="hw3_d">加密与法币随时互换，汇率透明，所见即所得。</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <h3 data-i18n="hw4_t">自由消费</h3>
+            <p data-i18n="hw4_d">用 BF Card 全球消费，或提现到全球银行账户。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BRAND PRESENCE (billboard) ===== -->
+    <section class="section" id="brand">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="bb_eyebrow">品牌实景</span>
+          <h2 class="section-title" data-i18n="bb_title">把 BITFLUX 带到真实世界</h2>
+        </div>
+        <div class="billboard reveal">
+          <img src="assets/posters/billboard.jpg" alt="BITFLUX out-of-home advertising" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECURITY & TRUST ===== -->
+    <section class="section section-alt" id="trust">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="tr_eyebrow">安全与信任</span>
+          <h2 class="section-title" data-i18n="tr_title">以银行级标准，守护每一笔资产</h2>
+          <p class="section-lead" data-i18n="tr_lead">合规流程、多重防护与全天候网络——让每个人都能放心使用。</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-ico"><svg class="ico"><use href="#i-shield"/></svg></div>
+            <h3 data-i18n="tr1_t">合规运营</h3>
+            <p data-i18n="tr1_d">严格执行 KYC / AML 流程，分级认证，额度清晰透明。</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-ico"><svg class="ico"><use href="#i-lock"/></svg></div>
+            <h3 data-i18n="tr2_t">多重资金防护</h3>
+            <p data-i18n="tr2_d">6 位交易 PIN 与二次验证，关键操作层层加锁。</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-ico"><svg class="ico"><use href="#i-bell"/></svg></div>
+            <h3 data-i18n="tr3_t">实时安全提醒</h3>
+            <p data-i18n="tr3_d">新设备登录与账户动态即时通知，异常第一时间掌握。</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-ico"><svg class="ico"><use href="#i-clock"/></svg></div>
+            <h3 data-i18n="tr4_t">7×24 全天候</h3>
+            <p data-i18n="tr4_d">全年无休的全球网络，资产随时可存、可兑、可动。</p>
+          </div>
+        </div>
+        <div class="stat-band reveal" style="margin-top:44px">
+          <div><strong data-count="5" data-suffix="+">5+</strong><span data-i18n="ts1">种支持资产</span></div>
+          <div><strong data-count="4">4</strong><span data-i18n="ts2">条充值网络</span></div>
+          <div><strong data-count="5">5</strong><span data-i18n="ts3">种法币提现</span></div>
+          <div><strong data-count="10" data-suffix="%">10%</strong><span data-i18n="ts4">最高邀请奖励</span></div>
+        </div>
+        <div class="center-cta reveal">
+          <a class="btn btn-ghost btn-lg" href="features.html#security" data-i18n="tr_more">了解安全与合规详情 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REGULATORY COMPLIANCE (license badges + big stats) ===== -->
+    <section class="section" id="compliance">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="cp_eyebrow">合规监管</span>
+          <h2 class="section-title" data-i18n="cp_title">持牌合规，为全球金融而建</h2>
+          <p class="section-lead" data-i18n="cp_lead">在多个司法管辖区持牌运营，以机构级标准建设基础设施。</p>
+        </div>
+        <div class="comp-badges reveal">
+          <div class="cbadge" style="--cb:#3f6b4a">
+            <div class="cb-top"><span data-i18n="cb1_c">美国</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">FinCEN</div>
+            <div class="cb-name" data-i18n="cb1_n">货币服务业务注册 (MSB)</div>
+          </div>
+          <div class="cbadge" style="--cb:#2e7d74">
+            <div class="cb-top"><span data-i18n="cb2_c">香港</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">SFC</div>
+            <div class="cb-name" data-i18n="cb2_n">证券牌照 1 / 4 / 5 / 9 号</div>
+          </div>
+          <div class="cbadge" style="--cb:#b3541e">
+            <div class="cb-top"><span data-i18n="cb3_c">香港</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">MSO</div>
+            <div class="cb-name" data-i18n="cb3_n">金钱服务经营者牌照</div>
+          </div>
+          <div class="cbadge" style="--cb:#7a2f57">
+            <div class="cb-top"><span data-i18n="cb4_c">英国</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">FCA</div>
+            <div class="cb-name" data-i18n="cb4_n">金融行为监管局</div>
+          </div>
+          <div class="cbadge" style="--cb:#2f5a8a">
+            <div class="cb-top"><span data-i18n="cb5_c">瑞士</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">VQF</div>
+            <div class="cb-name" data-i18n="cb5_n">VQF 自律组织会员</div>
+          </div>
+          <div class="cbadge" style="--cb:#8a6d2e">
+            <div class="cb-top"><span data-i18n="cb6_c">阿联酋</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">CMA</div>
+            <div class="cb-name" data-i18n="cb6_n">资本市场管理局</div>
+          </div>
+          <div class="cbadge" style="--cb:#c07f28">
+            <div class="cb-top"><span data-i18n="cb7_c">塞舌尔</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
+            <div class="cb-acr">FSA</div>
+            <div class="cb-name" data-i18n="cb7_n">金融服务管理局</div>
+          </div>
+        </div>
+        <div class="comp-stats">
+          <div class="cstat reveal"><strong data-count="10" data-suffix="+">10+</strong><span data-i18n="cs1_l">项合规牌照与注册</span></div>
+          <div class="cstat reveal"><strong data-count="8">8</strong><span data-i18n="cs2_l">个司法管辖区</span></div>
+          <div class="cstat reveal"><strong data-count="173" data-suffix="+">173+</strong><span data-i18n="cs3_l">服务国家与地区</span></div>
+          <div class="cstat reveal"><strong>7×24</strong><span data-i18n="cs4_l">全天候服务与风控</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2 data-i18n="cta_title">让你的资产，真正流动起来</h2>
+          <p data-i18n="cta_sub">几分钟开户，把加密货币变成可花的钱。</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="cta_b1">立即开户</a>
+            <a class="btn btn-ghost btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" data-i18n="cta_b2">关注 Twitter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/bitflux-logo.png" alt="BITFLUX" />
+          <p data-i18n="foot_desc">一站式加密与法币账户。把数字资产变成可花的钱。</p>
+          <a class="footer-tg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener">Twitter → @BitfluxCard</a>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4 data-i18n="foot_product">功能</h4>
+            <a href="features.html" data-i18n="f1_t">多币种钱包</a>
+            <a href="features.html" data-i18n="f2_t">外汇兑换 · Swap</a>
+            <a href="card.html" data-i18n="nav_card">BF Card</a>
+            <a href="features.html" data-i18n="f4_t">全球法币提现</a>
+            <a href="coming-soon.html?p=BF%20Invest" data-i18n="foot_invest">BF Invest（即将上线）</a>
+          </div>
+          <div>
+            <h4 data-i18n="foot_resource">资源</h4>
+            <a href="features.html#security" data-i18n="nav_security">安全</a>
+            <a href="features.html#referral" data-i18n="nav_referral">邀请有礼</a>
+            <a href="features.html#faq" data-i18n="nav_faq">常见问题</a>
+            <a href="https://x.com/bitfluxcard" target="_blank" rel="noopener" data-i18n="foot_support">联系支持</a>
+          </div>
+          <div>
+            <h4 data-i18n="foot_start">开始</h4>
+            <a href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="nav_cta">开始使用</a>
+            <a href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="foot_login">登录</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BITFLUX. All rights reserved.</span>
+        <span class="build-tag">build 20260707-C</span>
+        <span data-i18n="foot_disclaimer">加密资产存在价格波动风险，请理性参与。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20260707c"></script>
+</body>
+</html>
