@@ -75,7 +75,7 @@
       var prod = (qs('p') || 'BITFLUX').toString().slice(0, 40);
       var lang;
       try { lang = localStorage.getItem('bitflux_lang'); } catch(e){}
-      if (!lang) lang = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+      if (lang !== 'zh' && lang !== 'en') lang = 'en';
       function apply(l){
         var d = T[l];
         document.documentElement.lang = (l === 'zh') ? 'zh-CN' : 'en';

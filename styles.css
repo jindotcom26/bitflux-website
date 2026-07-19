@@ -78,9 +78,10 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter','PingFang SC',sans-serif;font-we
 .nav-burger.open span:nth-child(2){opacity:0}
 .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .nav-mobile{display:none;flex-direction:column;gap:4px;padding:0 24px;background:rgba(10,9,7,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);overflow:hidden;max-height:0;transition:max-height .35s var(--ease),padding .35s}
-.nav-mobile.open{max-height:420px;padding:12px 24px 22px}
+.nav-mobile.open{max-height:520px;padding:12px 24px 22px}
 .nav-mobile a{padding:12px 0;color:var(--txt-mut);border-bottom:1px solid var(--hair);font-weight:500}
 .nav-mobile a.btn{border:0;margin-top:12px;color:#1a1304;justify-content:center}
+.lang-toggle-mobile{width:100%;margin-top:12px;padding:12px 14px;text-align:center}
 
 /* ===================== HERO ===================== */
 .hero{position:relative;padding:150px 0 0;overflow:hidden}

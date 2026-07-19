@@ -533,11 +533,10 @@
     }
   };
 
-  var LANG = 'zh';
+  var LANG = 'en';
   try {
     var saved = localStorage.getItem('bitflux_lang');
-    if (saved) LANG = saved;
-    else LANG = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+    if (saved === 'zh' || saved === 'en') LANG = saved;
   } catch (e) {}
 
   function applyLang(lang) {
@@ -548,17 +547,29 @@
       var key = el.getAttribute('data-i18n');
       if (dict[key] != null) el.textContent = dict[key];
     });
+    var toggleLabel = (lang === 'zh') ? 'EN' : '中文';
     var toggle = document.getElementById('langToggle');
-    if (toggle) toggle.textContent = (lang === 'zh') ? 'EN' : '中文';
+    if (toggle) toggle.textContent = toggleLabel;
+    var toggleM = document.getElementById('langToggleMobile');
+    if (toggleM) {
+      toggleM.textContent = (lang === 'zh') ? 'English' : '中文';
+    }
     try { localStorage.setItem('bitflux_lang', lang); } catch (e) {}
   }
 
-  var langToggle = document.getElementById('langToggle');
-  if (langToggle) {
-    langToggle.addEventListener('click', function () {
+  function bindLangToggle(id, closeMenu) {
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
       applyLang(LANG === 'zh' ? 'en' : 'zh');
+      if (closeMenu && navMobile) {
+        navMobile.classList.remove('open');
+        if (burger) burger.classList.remove('open');
+      }
     });
   }
+  bindLangToggle('langToggle', false);
+  bindLangToggle('langToggleMobile', true);
 
   applyLang(LANG);
 })();
