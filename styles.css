@@ -269,6 +269,8 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter','PingFang SC',sans-serif;font-we
 .footer-brand img{height:26px;width:auto;margin-bottom:14px}
 .footer-brand p{color:var(--txt-mut);font-size:14px;margin-bottom:12px;max-width:300px;font-weight:300}
 .footer-tg{color:var(--gold-2);font-weight:600;font-size:14px}
+.footer-email{display:block;margin-top:8px;color:var(--txt-mut);font-size:14px;font-weight:300;transition:color .2s}
+.footer-email:hover{color:var(--gold-2)}
 .footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .footer-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--txt-dim);margin-bottom:14px;font-weight:600}
 .footer-cols a{display:block;color:var(--txt-mut);font-size:14px;padding:5px 0;transition:color .2s;font-weight:300}
