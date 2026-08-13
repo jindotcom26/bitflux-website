@@ -406,7 +406,13 @@
       cta_title: '让你的资产，真正流动起来', cta_sub: '几分钟开户，把加密货币变成可花的钱。', cta_b1: '立即开户', cta_b2: '关注 Twitter',
       foot_desc: '一站式加密与法币账户。把数字资产变成可花的钱。', foot_product: '功能', foot_invest: 'BF Invest（即将上线）',
       foot_resource: '资源', foot_support: '联系支持', foot_start: '开始', foot_login: '登录',
-      foot_disclaimer: '加密资产存在价格波动风险，请理性参与。'
+      foot_disclaimer: '加密资产存在价格波动风险，请理性参与。',
+      title_home: 'BITFLUX · 把加密货币变成可花的钱',
+      title_features: '功能详情 · BITFLUX',
+      title_card: 'BF Card · BITFLUX',
+      meta_home: 'BITFLUX 是一站式加密与法币账户：多币种钱包、外汇兑换、BF Card 银行卡、全球法币提现与多链充提。',
+      meta_features: 'BITFLUX 核心功能：多币种钱包、外汇兑换、全球法币提现、多链充提、邀请奖励、分级 KYC 与安全防护。',
+      meta_card: 'BITFLUX BF Card — Visa Platinum 虚拟卡与实体卡，用加密余额随时随地消费。三款卡面：Golden、Black、Blue。'
     },
     en: {
       nav_features: 'Features', nav_card: 'BF Card', nav_security: 'Security', nav_referral: 'Refer', nav_preview: 'Preview', nav_faq: 'FAQ', nav_cta: 'Get started',
@@ -529,7 +535,13 @@
       cta_title: 'Put your assets in motion', cta_sub: 'Open an account in minutes and turn crypto into money you can spend.', cta_b1: 'Open account', cta_b2: 'Follow on Twitter',
       foot_desc: 'An all-in-one crypto and fiat account. Turn digital assets into money you can spend.', foot_product: 'Features', foot_invest: 'BF Invest (soon)',
       foot_resource: 'Resources', foot_support: 'Contact support', foot_start: 'Start', foot_login: 'Log in',
-      foot_disclaimer: 'Crypto assets carry price volatility risk. Please participate rationally.'
+      foot_disclaimer: 'Crypto assets carry price volatility risk. Please participate rationally.',
+      title_home: 'BITFLUX · Turn crypto into money you can spend',
+      title_features: 'Features · BITFLUX',
+      title_card: 'BF Card · BITFLUX',
+      meta_home: 'BITFLUX is an all-in-one crypto and fiat account: multi-currency wallet, currency swap, BF Card, global fiat withdrawal and multi-chain deposit & withdraw.',
+      meta_features: 'BITFLUX core features: multi-currency wallet, currency swap, global fiat withdrawal, multi-chain deposit & withdraw, referral rewards, tiered KYC and security.',
+      meta_card: 'BITFLUX BF Card — Visa Platinum virtual and physical cards. Spend your crypto balance anytime, anywhere. Three finishes: Golden, Black, Blue.'
     }
   };
 
@@ -547,6 +559,11 @@
       var key = el.getAttribute('data-i18n');
       if (dict[key] != null) el.textContent = dict[key];
     });
+    var titleKey = document.body.getAttribute('data-i18n-title');
+    if (titleKey && dict[titleKey]) document.title = dict[titleKey];
+    var descKey = document.body.getAttribute('data-i18n-desc');
+    var descTag = document.querySelector('meta[name="description"]');
+    if (descKey && dict[descKey] && descTag) descTag.setAttribute('content', dict[descKey]);
     var toggleLabel = (lang === 'zh') ? 'EN' : '中文';
     var toggle = document.getElementById('langToggle');
     if (toggle) toggle.textContent = toggleLabel;

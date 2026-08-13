@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>即将上线 · BITFLUX</title>
+  <title>Coming soon · BITFLUX</title>
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#0A0907" />
   <link rel="icon" type="image/png" href="assets/bitflux-favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260707c" />
+  <link rel="stylesheet" href="styles.css?v=20260813" />
   <style>
     .cs-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:18px 24px}
     .cs-nav img{height:28px;width:auto}
@@ -42,7 +42,7 @@
     <a href="index.html" aria-label="BITFLUX home"><img src="assets/bitflux-logo.png" alt="BITFLUX" /></a>
     <div class="cs-actions">
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-      <a class="btn btn-ghost" href="index.html" id="backBtn">返回首页</a>
+      <a class="btn btn-ghost" href="index.html" id="backBtn">Back to home</a>
     </div>
   </header>
 
@@ -53,23 +53,23 @@
     </div>
     <div class="cs-inner">
       <div class="cs-mark"><img src="assets/bitflux-icon.png" alt="" /></div>
-      <span class="cs-badge"><span class="pill-dot"></span><span id="badge">敬请期待</span></span>
-      <h1 class="cs-title"><span class="cs-prod" id="prod">BITFLUX</span><br /><span id="soonText">即将上线</span></h1>
-      <p class="cs-sub" id="sub">我们正在全力打造这项功能。在 Twitter 关注我们，第一时间获取上线通知与抢先体验资格。</p>
-      <div class="cs-progress" aria-hidden="true"><div class="bar"><i></i></div><span id="prog">开发进度 · 72%</span></div>
+      <span class="cs-badge"><span class="pill-dot"></span><span id="badge">Coming soon</span></span>
+      <h1 class="cs-title"><span class="cs-prod" id="prod">BITFLUX</span><br /><span id="soonText">is coming soon</span></h1>
+      <p class="cs-sub" id="sub">We’re building this feature right now. Follow us on Twitter to get launch updates and early access first.</p>
+      <div class="cs-progress" aria-hidden="true"><div class="bar"><i></i></div><span id="prog">In development · 72%</span></div>
       <div class="cs-cta">
-        <a class="btn btn-primary btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" id="cta1">在 Twitter 获取通知</a>
-        <a class="btn btn-ghost btn-lg" href="index.html" id="cta2">返回首页</a>
+        <a class="btn btn-primary btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" id="cta1">Get notified on Twitter</a>
+        <a class="btn btn-ghost btn-lg" href="index.html" id="cta2">Back to home</a>
       </div>
-      <p class="cs-meta" id="meta">已上线：多币种钱包 · 外汇兑换 · BF Card · 全球提现</p>
+      <p class="cs-meta" id="meta">Live now: Wallet · Swap · BF Card · Global withdrawal</p>
     </div>
   </main>
 
   <script>
     (function () {
       var T = {
-        zh: { back: '返回首页', badge: '敬请期待', soon: '即将上线', sub: '我们正在全力打造这项功能。在 Twitter 关注我们，第一时间获取上线通知与抢先体验资格。', cta1: '在 Twitter 获取通知', cta2: '返回首页', prog: '开发进度 · 72%', meta: '已上线：多币种钱包 · 外汇兑换 · BF Card · 全球提现' },
-        en: { back: 'Back to home', badge: 'Coming soon', soon: 'is coming soon', sub: 'We\u2019re building this feature right now. Follow us on Twitter to get launch updates and early access first.', cta1: 'Get notified on Twitter', cta2: 'Back to home', prog: 'In development · 72%', meta: 'Live now: Wallet · Swap · BF Card · Global withdrawal' }
+        zh: { back: '返回首页', badge: '敬请期待', soon: '即将上线', sub: '我们正在全力打造这项功能。在 Twitter 关注我们，第一时间获取上线通知与抢先体验资格。', cta1: '在 Twitter 获取通知', cta2: '返回首页', prog: '开发进度 · 72%', meta: '已上线：多币种钱包 · 外汇兑换 · BF Card · 全球提现', title: '即将上线 · BITFLUX' },
+        en: { back: 'Back to home', badge: 'Coming soon', soon: 'is coming soon', sub: 'We\u2019re building this feature right now. Follow us on Twitter to get launch updates and early access first.', cta1: 'Get notified on Twitter', cta2: 'Back to home', prog: 'In development · 72%', meta: 'Live now: Wallet · Swap · BF Card · Global withdrawal', title: 'Coming soon · BITFLUX' }
       };
       function qs(n){ try { return new URLSearchParams(location.search).get(n); } catch(e){ return null; } }
       var prod = (qs('p') || 'BITFLUX').toString().slice(0, 40);
@@ -79,6 +79,7 @@
       function apply(l){
         var d = T[l];
         document.documentElement.lang = (l === 'zh') ? 'zh-CN' : 'en';
+        document.title = d.title;
         document.getElementById('prod').textContent = prod;
         document.getElementById('badge').textContent = d.badge;
         document.getElementById('soonText').textContent = (l === 'zh') ? d.soon : d.soon;
