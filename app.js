@@ -412,7 +412,22 @@
       title_card: 'BF Card · BITFLUX',
       meta_home: 'BITFLUX 是一站式加密与法币账户：多币种钱包、外汇兑换、BF Card 银行卡、全球法币提现与多链充提。',
       meta_features: 'BITFLUX 核心功能：多币种钱包、外汇兑换、全球法币提现、多链充提、邀请奖励、分级 KYC 与安全防护。',
-      meta_card: 'BITFLUX BF Card — Visa Platinum 虚拟卡与实体卡，用加密余额随时随地消费。三款卡面：Golden、Black、Blue。'
+      meta_card: 'BITFLUX BF Card — Visa Platinum 虚拟卡与实体卡，用加密余额随时随地消费。三款卡面：Golden、Black、Blue。',
+      /* features.html 手机模拟界面内的演示文案 */
+      mk_tab_home: '首页', mk_tab_card: '卡片', mk_tab_msg: '消息', mk_tab_set: '设置', mk_tab_hist: '记录', mk_tab_ref: '邀请',
+      mk_w_title: '钱包', mk_w_bal: '可用余额', mk_w_send: '发送', mk_w_recv: '接收', mk_w_swap: '兑换', mk_w_invest: '投资', mk_w_assets: '我的资产',
+      mk_s_title: '外汇兑换', mk_s_sell: '卖出', mk_s_buy: '买入', mk_s_rate: '参考汇率', mk_s_eta_l: '预计到账', mk_s_eta_v: '秒级', mk_s_btn: '确认兑换',
+      mk_c_spent: '本月消费', mk_c_avail: '可用额度', mk_c_recent: '最近消费', mk_c_t1: '今天 14:22', mk_c_t2: '昨天 09:10',
+      mk_wd_title: '法币提现', mk_wd_amt: '提现金额', mk_wd_cur: '到账币种', mk_wd_bank: '收款银行', mk_wd_eta: '预计 1 个工作日到账', mk_wd_btn: '确认提现',
+      mk_h_title: '交易记录',
+      mk_h_r1: '充值 · TRC20', mk_h_r1t: '今天 11:02', mk_h_r2: '兑换 USDT→USD', mk_h_r2t: '今天 10:48',
+      mk_h_r3: '提现 · HSBC', mk_h_r3t: '昨天 18:30', mk_h_r4: '充值 · ERC20', mk_h_r5: '邀请奖励',
+      mk_r_title: '邀请有礼', mk_r_cap: '邀请好友，共享最高 10% 收益', mk_r_link: '你的专属邀请链接', mk_r_copy: '复制',
+      mk_r_invited: '已邀请', mk_r_earned: '累计奖励', mk_r_recent: '最近奖励', mk_r_row1: '好友 A 完成认证', mk_r_row1t: '今天 12:30',
+      mk_k_title: '账户状态', mk_k_sec1: '身份认证等级',
+      mk_k_l0: 'KYC-0 · 基础', mk_k_l0d: '注册即开通', mk_k_l1: 'KYC-1 · 标准', mk_k_l1d: '解锁更高额度',
+      mk_k_l2: 'KYC-2 · 高级', mk_k_l2d: '最高额度 · 审核中', mk_k_done: '已完成', mk_k_prog: '进行中',
+      mk_k_sec2: '当前额度', mk_k_dep: '加密充值 / 日', mk_k_wd: '法币提现 / 日'
     },
     en: {
       nav_features: 'Features', nav_card: 'BF Card', nav_security: 'Security', nav_referral: 'Refer', nav_preview: 'Preview', nav_faq: 'FAQ', nav_cta: 'Get started',
@@ -541,7 +556,22 @@
       title_card: 'BF Card · BITFLUX',
       meta_home: 'BITFLUX is an all-in-one crypto and fiat account: multi-currency wallet, currency swap, BF Card, global fiat withdrawal and multi-chain deposit & withdraw.',
       meta_features: 'BITFLUX core features: multi-currency wallet, currency swap, global fiat withdrawal, multi-chain deposit & withdraw, referral rewards, tiered KYC and security.',
-      meta_card: 'BITFLUX BF Card — Visa Platinum virtual and physical cards. Spend your crypto balance anytime, anywhere. Three finishes: Golden, Black, Blue.'
+      meta_card: 'BITFLUX BF Card — Visa Platinum virtual and physical cards. Spend your crypto balance anytime, anywhere. Three finishes: Golden, Black, Blue.',
+      /* Demo copy inside the phone mockups on features.html */
+      mk_tab_home: 'Home', mk_tab_card: 'Card', mk_tab_msg: 'Messages', mk_tab_set: 'Settings', mk_tab_hist: 'History', mk_tab_ref: 'Refer',
+      mk_w_title: 'Wallet', mk_w_bal: 'Available balance', mk_w_send: 'Send', mk_w_recv: 'Receive', mk_w_swap: 'Swap', mk_w_invest: 'Invest', mk_w_assets: 'My assets',
+      mk_s_title: 'Currency swap', mk_s_sell: 'You sell', mk_s_buy: 'You get', mk_s_rate: 'Indicative rate', mk_s_eta_l: 'Settlement', mk_s_eta_v: 'Seconds', mk_s_btn: 'Confirm swap',
+      mk_c_spent: 'Spent this month', mk_c_avail: 'Available limit', mk_c_recent: 'Recent spending', mk_c_t1: 'Today 14:22', mk_c_t2: 'Yesterday 09:10',
+      mk_wd_title: 'Fiat withdrawal', mk_wd_amt: 'Withdrawal amount', mk_wd_cur: 'Receive currency', mk_wd_bank: 'Recipient bank', mk_wd_eta: 'Arrives in ~1 business day', mk_wd_btn: 'Confirm withdrawal',
+      mk_h_title: 'Transactions',
+      mk_h_r1: 'Deposit · TRC20', mk_h_r1t: 'Today 11:02', mk_h_r2: 'Swap USDT→USD', mk_h_r2t: 'Today 10:48',
+      mk_h_r3: 'Withdrawal · HSBC', mk_h_r3t: 'Yesterday 18:30', mk_h_r4: 'Deposit · ERC20', mk_h_r5: 'Referral reward',
+      mk_r_title: 'Referral rewards', mk_r_cap: 'Invite friends and earn up to 10% together', mk_r_link: 'Your personal invite link', mk_r_copy: 'Copy',
+      mk_r_invited: 'Invited', mk_r_earned: 'Total rewards', mk_r_recent: 'Recent rewards', mk_r_row1: 'Friend A passed KYC', mk_r_row1t: 'Today 12:30',
+      mk_k_title: 'Account status', mk_k_sec1: 'Verification level',
+      mk_k_l0: 'KYC-0 · Basic', mk_k_l0d: 'Active on sign-up', mk_k_l1: 'KYC-1 · Standard', mk_k_l1d: 'Higher limits unlocked',
+      mk_k_l2: 'KYC-2 · Advanced', mk_k_l2d: 'Top limits · in review', mk_k_done: 'Done', mk_k_prog: 'In review',
+      mk_k_sec2: 'Current limits', mk_k_dep: 'Crypto deposit/day', mk_k_wd: 'Fiat withdrawal/day'
     }
   };
 
