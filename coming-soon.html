@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260813" />
+  <link rel="stylesheet" href="styles.css?v=20261023" />
   <style>
     .cs-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:18px 24px}
     .cs-nav img{height:28px;width:auto}
@@ -30,11 +30,6 @@
     .cs-sub{font-size:clamp(15px,1.8vw,18px);color:var(--txt-mut);margin-bottom:34px}
     .cs-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
     .cs-meta{font-size:13px;color:var(--txt-dim)}
-    .cs-progress{max-width:340px;margin:0 auto 30px}
-    .cs-progress .bar{height:8px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
-    .cs-progress .bar i{display:block;height:100%;width:72%;background:var(--gold-grad);border-radius:999px;animation:grow 1.4s var(--ease) both}
-    .cs-progress span{display:block;margin-top:10px;font-size:12px;color:var(--txt-dim)}
-    @keyframes grow{from{width:0}to{width:72%}}
   </style>
 </head>
 <body>
@@ -55,10 +50,9 @@
       <div class="cs-mark"><img src="assets/bitflux-icon.png" alt="" /></div>
       <span class="cs-badge"><span class="pill-dot"></span><span id="badge">Coming soon</span></span>
       <h1 class="cs-title"><span class="cs-prod" id="prod">BITFLUX</span><br /><span id="soonText">is coming soon</span></h1>
-      <p class="cs-sub" id="sub">We’re building this feature right now. Follow us on Twitter to get launch updates and early access first.</p>
-      <div class="cs-progress" aria-hidden="true"><div class="bar"><i></i></div><span id="prog">In development · 72%</span></div>
+      <p class="cs-sub" id="sub">We’re building this feature. Follow us on Twitter for launch updates.</p>
       <div class="cs-cta">
-        <a class="btn btn-primary btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" id="cta1">Get notified on Twitter</a>
+        <a class="btn btn-primary btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" id="cta1">Follow on Twitter</a>
         <a class="btn btn-ghost btn-lg" href="index.html" id="cta2">Back to home</a>
       </div>
       <p class="cs-meta" id="meta">Live now: Wallet · Swap · BF Card · Global withdrawal</p>
@@ -68,8 +62,8 @@
   <script>
     (function () {
       var T = {
-        zh: { back: '返回首页', badge: '敬请期待', soon: '即将上线', sub: '我们正在全力打造这项功能。在 Twitter 关注我们，第一时间获取上线通知与抢先体验资格。', cta1: '在 Twitter 获取通知', cta2: '返回首页', prog: '开发进度 · 72%', meta: '已上线：多币种钱包 · 外汇兑换 · BF Card · 全球提现', title: '即将上线 · BITFLUX' },
-        en: { back: 'Back to home', badge: 'Coming soon', soon: 'is coming soon', sub: 'We\u2019re building this feature right now. Follow us on Twitter to get launch updates and early access first.', cta1: 'Get notified on Twitter', cta2: 'Back to home', prog: 'In development · 72%', meta: 'Live now: Wallet · Swap · BF Card · Global withdrawal', title: 'Coming soon · BITFLUX' }
+        zh: { back: '返回首页', badge: '敬请期待', soon: '即将上线', sub: '这项功能正在开发中。关注我们的 Twitter，获取上线消息。', cta1: '关注 Twitter', cta2: '返回首页', meta: '已上线：多币种钱包 · 外汇兑换 · BF Card · 全球提现', title: '即将上线 · BITFLUX' },
+        en: { back: 'Back to home', badge: 'Coming soon', soon: 'is coming soon', sub: 'We\u2019re building this feature. Follow us on Twitter for launch updates.', cta1: 'Follow on Twitter', cta2: 'Back to home', meta: 'Live now: Wallet · Swap · BF Card · Global withdrawal', title: 'Coming soon · BITFLUX' }
       };
       function qs(n){ try { return new URLSearchParams(location.search).get(n); } catch(e){ return null; } }
       var prod = (qs('p') || 'BITFLUX').toString().slice(0, 40);
@@ -87,7 +81,6 @@
         document.getElementById('cta1').textContent = d.cta1;
         document.getElementById('cta2').textContent = d.cta2;
         document.getElementById('backBtn').textContent = d.back;
-        document.getElementById('prog').textContent = d.prog;
         document.getElementById('meta').textContent = d.meta;
         var t = document.getElementById('langToggle');
         if (t) t.textContent = (l === 'zh') ? 'EN' : '中文';

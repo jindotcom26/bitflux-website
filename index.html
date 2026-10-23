@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260813" />
+  <link rel="stylesheet" href="styles.css?v=20261023" />
 </head>
 <body class="page-home" data-i18n-title="title_home" data-i18n-desc="meta_home">
   <!-- ===== SVG icon sprite ===== -->
@@ -121,7 +121,7 @@
           <a class="hl reveal" href="features.html">
             <div class="hl-ico"><svg class="ico"><use href="#i-swap"/></svg></div>
             <h3 data-i18n="hl2_t">Currency swap</h3>
-            <p data-i18n="hl2_d">Instant, transparent rates</p>
+            <p data-i18n="hl2_d">See the rate before you swap</p>
           </a>
           <a class="hl reveal" href="card.html">
             <div class="hl-ico"><svg class="ico"><use href="#i-card"/></svg></div>
@@ -143,14 +143,14 @@
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="ps_eyebrow">Full product suite</span>
           <h2 class="section-title" data-i18n="ps_title">One account for every step of your money</h2>
-          <p class="section-lead" data-i18n="ps_lead">Deposit, swap, spend, send, earn, invest — global finance in one app.</p>
+          <p class="section-lead" data-i18n="ps_lead">Deposit, swap, spend and send — all in one app.</p>
         </div>
         <div class="bento">
           <!-- BF Pay — send-money demo (tall) -->
           <div class="bx bx-pay reveal">
             <span class="bx-pill"><svg class="ico"><use href="#i-send"/></svg>BF Pay</span>
-            <h3 data-i18n="bxp_t">Global transfers, in seconds</h3>
-            <p class="bx-sub" data-i18n="bxp_s">Withdraw to bank accounts worldwide · USD · SGD · HKD · GBP · EUR</p>
+            <h3 data-i18n="bxp_t">Send to bank accounts worldwide</h3>
+            <p class="bx-sub" data-i18n="bxp_s">USD · SGD · HKD · GBP · EUR</p>
             <div class="bx-amt" aria-hidden="true">$1,000<small>.00 USD</small></div>
             <div class="bx-form" aria-hidden="true">
               <div class="bx-field"><span data-i18n="bxp_from">From</span><b><i data-i18n="bxp_from_v">Hong Kong</i> ▾</b></div>
@@ -162,9 +162,9 @@
           <div class="bx bx-swap reveal">
             <span class="bx-pill"><svg class="ico"><use href="#i-swap"/></svg>BF Swap</span>
             <h3 data-i18n="bxs_t">Crypto ⇄ Fiat</h3>
-            <p class="bx-sub" data-i18n="bxs_s">One-tap swap · transparent rates</p>
+            <p class="bx-sub" data-i18n="bxs_s">See the rate before you swap</p>
             <div class="bx-big" aria-hidden="true">1,250<small>.00</small></div>
-            <div class="bx-cap" data-i18n="bxs_cap">USDT → USD · instant settlement</div>
+            <div class="bx-cap" data-i18n="bxs_cap">USDT / USDC → USD</div>
           </div>
           <!-- BF Wallet — asset donut -->
           <div class="bx bx-wallet reveal">
@@ -176,7 +176,7 @@
                 <circle cx="75" cy="75" r="60" fill="none" stroke="#EAD9A8" stroke-width="14" stroke-linecap="round" stroke-dasharray="72 377" stroke-dashoffset="-230"/>
                 <circle cx="75" cy="75" r="60" fill="none" stroke="#8A6D2E" stroke-width="14" stroke-linecap="round" stroke-dasharray="50 377" stroke-dashoffset="-316"/>
               </svg>
-              <div class="donut-center"><b>5+</b><span data-i18n="bxw_c">assets</span></div>
+              <div class="donut-center"><b>5</b><span data-i18n="bxw_c">assets</span></div>
             </div>
             <h3 data-i18n="bxw_t">Multi-asset wallet</h3>
             <p class="bx-sub" data-i18n="bxw_s">USDT · USD · BTC · ETH · USDC</p>
@@ -185,29 +185,28 @@
           <div class="bx bx-card reveal">
             <span class="bx-pill"><svg class="ico"><use href="#i-card"/></svg>BF Card</span>
             <h3 data-i18n="bxc_t">Spend anywhere</h3>
-            <p class="bx-sub" data-i18n="bxc_q">On the Visa network — accepted by tens of millions of merchants, online and offline.</p>
-            <img class="bx-cardimg" src="assets/cards/card-gold.png" alt="BITFLUX BF Card · Visa Platinum" loading="lazy" />
+            <p class="bx-sub" data-i18n="bxc_q">Pay online and in stores on the Visa network.</p>
+            <img class="bx-cardimg" src="assets/cards/card-gold.png" alt="BITFLUX BF Card" loading="lazy" />
           </div>
-          <!-- BF Earn — coin stack -->
+          <!-- Deposit — 4 networks (verified in app, see 测试报告-20260628) -->
           <div class="bx bx-earn reveal">
-            <span class="bx-pill"><svg class="ico"><use href="#i-earn"/></svg>BF Earn</span>
+            <span class="bx-pill"><svg class="ico"><use href="#i-deposit"/></svg><span data-i18n="bxd_pill">Deposit</span></span>
             <div class="coin-row" aria-hidden="true">
               <span class="coin-chip">₮</span><span class="coin-chip">$</span><span class="coin-chip">₿</span><span class="coin-chip">Ξ</span>
             </div>
-            <h3 data-i18n="bxe_t">Put idle assets to work</h3>
-            <p class="bx-sub" data-i18n="bxe_s">Flexible access · transparent returns</p>
+            <h3 data-i18n="bxd_t">Deposit on 4 networks</h3>
+            <p class="bx-sub">ERC20 · BEP20 · TRC20 · Polygon</p>
           </div>
           <!-- BF Invest — wide statement band -->
           <div class="bx bx-invest reveal">
             <div class="bxi-copy">
               <span class="bx-pill"><svg class="ico"><use href="#i-invest"/></svg>BF Invest</span>
-              <h3 data-i18n="bxi_t">Wealth favors the prepared</h3>
-              <p class="bx-sub" data-i18n="bxi_s">A one-stop gateway to crypto and a diversified range of quality assets.</p>
+              <h3 data-i18n="bxi_t">Coming soon</h3>
+              <p class="bx-sub" data-i18n="bxi_s">BF Invest is not live yet. Follow us on Twitter for updates.</p>
             </div>
-            <div class="bxi-stat" aria-hidden="true">
-              <span data-i18n="bxi_stat_l">Total earned · demo</span>
-              <b>$10,333.50</b>
-              <em>+23.4%</em>
+            <div class="bxi-stat">
+              <span data-i18n="bxi_stat_l">Status</span>
+              <b data-i18n="bxi_stat_v">In development</b>
             </div>
           </div>
         </div>
@@ -221,7 +220,7 @@
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="card_eyebrow">BF Card</span>
           <h2 class="section-title" data-i18n="card_title">Spend with confidence</h2>
-          <p class="section-lead" data-i18n="card_lead">Turn your balance into spending power — virtual cards instantly, physical cards within reach.</p>
+          <p class="section-lead" data-i18n="card_lead">Turn your balance into spending power, with virtual and physical cards.</p>
         </div>
         <div class="card-show reveal">
           <div class="card-show-item"><img src="assets/cards/card-gold.png" alt="BITFLUX Golden Card" loading="lazy" /></div>
@@ -239,31 +238,31 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="hw_eyebrow">Four simple steps</span>
-          <h2 class="section-title" data-i18n="hw_title">Your global account, in minutes</h2>
+          <h2 class="section-title" data-i18n="hw_title">Get started in four steps</h2>
         </div>
         <div class="steps">
           <div class="step reveal">
             <div class="step-num">01</div>
             <h3 data-i18n="hw1_t">Sign up</h3>
-            <p data-i18n="hw1_d">Register by phone or email and complete verification in minutes.</p>
+            <p data-i18n="hw1_d">Sign up with your phone or email, then verify your identity.</p>
           </div>
           <div class="step-arrow" aria-hidden="true">→</div>
           <div class="step reveal">
             <div class="step-num">02</div>
             <h3 data-i18n="hw2_t">Fund your account</h3>
-            <p data-i18n="hw2_d">Deposit crypto across chains — scan to receive, into one unified balance.</p>
+            <p data-i18n="hw2_d">Deposit crypto on ERC20, BEP20, TRC20 or Polygon.</p>
           </div>
           <div class="step-arrow" aria-hidden="true">→</div>
           <div class="step reveal">
             <div class="step-num">03</div>
             <h3 data-i18n="hw3_t">Swap in one tap</h3>
-            <p data-i18n="hw3_d">Convert between crypto and fiat anytime, with transparent rates.</p>
+            <p data-i18n="hw3_d">Swap crypto to USD. You see the rate before you confirm.</p>
           </div>
           <div class="step-arrow" aria-hidden="true">→</div>
           <div class="step reveal">
             <div class="step-num">04</div>
             <h3 data-i18n="hw4_t">Spend freely</h3>
-            <p data-i18n="hw4_d">Spend globally with the BF Card, or withdraw to bank accounts worldwide.</p>
+            <p data-i18n="hw4_d">Spend with the BF Card, or withdraw to a bank account.</p>
           </div>
         </div>
       </div>
@@ -273,11 +272,11 @@
     <section class="section" id="brand">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow" data-i18n="bb_eyebrow">In the world</span>
-          <h2 class="section-title" data-i18n="bb_title">BITFLUX out in the real world</h2>
+          <span class="eyebrow" data-i18n="bb_eyebrow">Brand</span>
+          <h2 class="section-title" data-i18n="bb_title">Flux your crypto, pay the world</h2>
         </div>
         <div class="billboard reveal">
-          <img src="assets/posters/billboard.jpg" alt="BITFLUX out-of-home advertising" loading="lazy" />
+          <img src="assets/posters/billboard.jpg" alt="BITFLUX brand poster" loading="lazy" />
         </div>
       </div>
     </section>
@@ -287,94 +286,64 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="tr_eyebrow">Security &amp; trust</span>
-          <h2 class="section-title" data-i18n="tr_title">Bank-grade standards for every asset</h2>
-          <p class="section-lead" data-i18n="tr_lead">Compliant processes, layered protection and an always-on network — built for everyone to use with confidence.</p>
+          <h2 class="section-title" data-i18n="tr_title">Layered protection for your account</h2>
+          <p class="section-lead" data-i18n="tr_lead">Identity checks, a transaction PIN and security alerts help keep your account safe.</p>
         </div>
         <div class="why-grid">
           <div class="why-card reveal">
             <div class="why-ico"><svg class="ico"><use href="#i-shield"/></svg></div>
-            <h3 data-i18n="tr1_t">Compliant by design</h3>
-            <p data-i18n="tr1_d">Strict KYC / AML processes, tiered verification, transparent limits.</p>
+            <h3 data-i18n="tr1_t">Verified accounts</h3>
+            <p data-i18n="tr1_d">Three KYC tiers, with clear limits at each tier.</p>
           </div>
           <div class="why-card reveal">
             <div class="why-ico"><svg class="ico"><use href="#i-lock"/></svg></div>
-            <h3 data-i18n="tr2_t">Layered fund protection</h3>
-            <p data-i18n="tr2_d">A 6-digit transaction PIN and second verification lock down key actions.</p>
+            <h3 data-i18n="tr2_t">Transaction PIN</h3>
+            <p data-i18n="tr2_d">A 6-digit PIN protects key actions like withdrawals.</p>
           </div>
           <div class="why-card reveal">
             <div class="why-ico"><svg class="ico"><use href="#i-bell"/></svg></div>
-            <h3 data-i18n="tr3_t">Real-time safety alerts</h3>
-            <p data-i18n="tr3_d">New-device logins and account activity flagged the moment they happen.</p>
+            <h3 data-i18n="tr3_t">Security alerts</h3>
+            <p data-i18n="tr3_d">Get alerts for new-device logins and account activity.</p>
           </div>
           <div class="why-card reveal">
-            <div class="why-ico"><svg class="ico"><use href="#i-clock"/></svg></div>
-            <h3 data-i18n="tr4_t">Always on, 7×24</h3>
-            <p data-i18n="tr4_d">A network that never closes — deposit, swap and move assets anytime.</p>
+            <div class="why-ico"><svg class="ico"><use href="#i-send"/></svg></div>
+            <h3 data-i18n="tr4_t">Help when you need it</h3>
+            <p data-i18n="tr4_d">Reach our team by email or on Twitter.</p>
           </div>
         </div>
         <div class="stat-band reveal" style="margin-top:44px">
-          <div><strong data-count="5" data-suffix="+">5+</strong><span data-i18n="ts1">Supported assets</span></div>
+          <div><strong data-count="5">5</strong><span data-i18n="ts1">Supported assets</span></div>
           <div><strong data-count="4">4</strong><span data-i18n="ts2">Deposit networks</span></div>
           <div><strong data-count="5">5</strong><span data-i18n="ts3">Fiat withdrawal currencies</span></div>
           <div><strong data-count="10" data-suffix="%">10%</strong><span data-i18n="ts4">Max referral reward</span></div>
         </div>
         <div class="center-cta reveal">
-          <a class="btn btn-ghost btn-lg" href="features.html#security" data-i18n="tr_more">Security &amp; compliance →</a>
+          <a class="btn btn-ghost btn-lg" href="features.html#security" data-i18n="tr_more">More on security →</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== REGULATORY COMPLIANCE (license badges + big stats) ===== -->
+    <!-- ===== REGISTRATION — only what we can prove (FinCEN MSB, see bitflux文件/msb_registration) ===== -->
     <section class="section" id="compliance">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow" data-i18n="cp_eyebrow">Regulatory compliance</span>
-          <h2 class="section-title" data-i18n="cp_title">Licensed, trusted, built for global finance</h2>
-          <p class="section-lead" data-i18n="cp_lead">Operating across multiple jurisdictions with institutional-grade infrastructure.</p>
+          <span class="eyebrow" data-i18n="cp_eyebrow">Registration</span>
+          <h2 class="section-title" data-i18n="cp_title">Registered with FinCEN</h2>
+          <p class="section-lead" data-i18n="cp_lead">BitFlux Limited is registered in the United States as a Money Services Business (MSB).</p>
         </div>
-        <div class="comp-badges reveal">
+        <div class="reg reveal">
           <div class="cbadge" style="--cb:#3f6b4a">
             <div class="cb-top"><span data-i18n="cb1_c">United States</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
             <div class="cb-acr">FinCEN</div>
             <div class="cb-name" data-i18n="cb1_n">Money Services Business (MSB)</div>
           </div>
-          <div class="cbadge" style="--cb:#2e7d74">
-            <div class="cb-top"><span data-i18n="cb2_c">Hong Kong</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">SFC</div>
-            <div class="cb-name" data-i18n="cb2_n">SFC License Type 1 / 4 / 5 / 9</div>
-          </div>
-          <div class="cbadge" style="--cb:#b3541e">
-            <div class="cb-top"><span data-i18n="cb3_c">Hong Kong</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">MSO</div>
-            <div class="cb-name" data-i18n="cb3_n">Money Service Operator</div>
-          </div>
-          <div class="cbadge" style="--cb:#7a2f57">
-            <div class="cb-top"><span data-i18n="cb4_c">United Kingdom</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">FCA</div>
-            <div class="cb-name" data-i18n="cb4_n">Financial Conduct Authority</div>
-          </div>
-          <div class="cbadge" style="--cb:#2f5a8a">
-            <div class="cb-top"><span data-i18n="cb5_c">Switzerland</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">VQF</div>
-            <div class="cb-name" data-i18n="cb5_n">VQF SRO Membership</div>
-          </div>
-          <div class="cbadge" style="--cb:#8a6d2e">
-            <div class="cb-top"><span data-i18n="cb6_c">UAE</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">CMA</div>
-            <div class="cb-name" data-i18n="cb6_n">Capital Market Authority</div>
-          </div>
-          <div class="cbadge" style="--cb:#c07f28">
-            <div class="cb-top"><span data-i18n="cb7_c">Seychelles</span><i class="cb-shield"><svg class="ico"><use href="#i-shield"/></svg></i></div>
-            <div class="cb-acr">FSA</div>
-            <div class="cb-name" data-i18n="cb7_n">Financial Services Authority</div>
-          </div>
+          <dl class="reg-info">
+            <div><dt data-i18n="reg_name_l">Registered name</dt><dd>BitFlux Limited</dd></div>
+            <div><dt data-i18n="reg_no_l">MSB registration no.</dt><dd>31000328099115</dd></div>
+            <div><dt data-i18n="reg_check_l">Verify</dt><dd><a href="https://www.fincen.gov/msb-registrant-search" target="_blank" rel="noopener" data-i18n="reg_check">FinCEN MSB Registrant Search →</a></dd></div>
+          </dl>
         </div>
-        <div class="comp-stats">
-          <div class="cstat reveal"><strong data-count="10" data-suffix="+">10+</strong><span data-i18n="cs1_l">Licenses &amp; registrations</span></div>
-          <div class="cstat reveal"><strong data-count="8">8</strong><span data-i18n="cs2_l">Jurisdictions</span></div>
-          <div class="cstat reveal"><strong data-count="173" data-suffix="+">173+</strong><span data-i18n="cs3_l">Countries &amp; regions served</span></div>
-          <div class="cstat reveal"><strong>7×24</strong><span data-i18n="cs4_l">Always-on service &amp; risk control</span></div>
-        </div>
+        <p class="reg-note reveal" data-i18n="reg_note">MSB registration is not a license. FinCEN does not endorse any registered business.</p>
       </div>
     </section>
 
@@ -383,7 +352,7 @@
       <div class="container">
         <div class="cta-box reveal">
           <h2 data-i18n="cta_title">Put your assets in motion</h2>
-          <p data-i18n="cta_sub">Open an account in minutes and turn crypto into money you can spend.</p>
+          <p data-i18n="cta_sub">Open an account and turn crypto into money you can spend.</p>
           <div class="cta-actions">
             <a class="btn btn-primary btn-lg" href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="cta_b1">Open account</a>
             <a class="btn btn-ghost btn-lg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener" data-i18n="cta_b2">Follow on Twitter</a>
@@ -401,7 +370,6 @@
           <img src="assets/bitflux-logo.png" alt="BITFLUX" />
           <p data-i18n="foot_desc">An all-in-one crypto and fiat account. Turn digital assets into money you can spend.</p>
           <a class="footer-tg" href="https://x.com/bitfluxcard" target="_blank" rel="noopener">Twitter → @BitfluxCard</a>
-          <a class="footer-email" href="mailto:info@bitflux.link">info@bitflux.link</a>
         </div>
         <div class="footer-cols">
           <div>
@@ -417,23 +385,34 @@
             <a href="features.html#security" data-i18n="nav_security">Security</a>
             <a href="features.html#referral" data-i18n="nav_referral">Refer</a>
             <a href="features.html#faq" data-i18n="nav_faq">FAQ</a>
-            <a href="https://x.com/bitfluxcard" target="_blank" rel="noopener" data-i18n="foot_support">Contact support</a>
+            <a href="mailto:info@bitflux.link" data-i18n="foot_support">Contact support</a>
           </div>
           <div>
             <h4 data-i18n="foot_start">Start</h4>
             <a href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="nav_cta">Get started</a>
             <a href="https://app.bitflux.link" target="_blank" rel="noopener" data-i18n="foot_login">Log in</a>
           </div>
+          <div>
+            <h4 data-i18n="foot_legal">Legal</h4>
+            <a href="privacy.html" data-i18n="foot_privacy">Privacy Policy</a>
+            <a href="terms.html" data-i18n="foot_terms">Terms of Service</a>
+          </div>
         </div>
       </div>
+      <div class="footer-company">
+        <p class="fc-name">BitFlux Limited</p>
+        <p data-i18n="foot_entity">Incorporated in the British Virgin Islands (Company No. 2189521), with its office in Hong Kong.</p>
+        <address>Room 602, 6/F, Kai Yue Commercial Building, No. 2C Argyle Street, Mong Kok, Kowloon, Hong Kong</address>
+        <p><span data-i18n="foot_email_l">Email: </span><a href="mailto:info@bitflux.link">info@bitflux.link</a></p>
+      </div>
       <div class="footer-bottom">
-        <span>© 2026 BITFLUX. All rights reserved.</span>
-        <span class="build-tag">build 20260813</span>
+        <span>© 2026 BitFlux Limited. All rights reserved.</span>
+        <span class="build-tag">build 20261023</span>
         <span data-i18n="foot_disclaimer">Crypto assets carry price volatility risk. Please participate rationally.</span>
       </div>
     </div>
   </footer>
 
-  <script src="app.js?v=20260813"></script>
+  <script src="app.js?v=20261023"></script>
 </body>
 </html>

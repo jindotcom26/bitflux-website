@@ -3,16 +3,27 @@
 A modern, responsive landing page for **BITFLUX**, a crypto→cash finance app.
 
 **Scope = the real app only.** Every feature shown maps to something that actually
-exists in the live BITFLUX app. Template-derived items that we don't have (BF Earn,
-BF Markets, the "Solutions" matrix, partner logos, fabricated license/country stats)
-have been removed. BF Invest is shown as an honest "coming soon".
+exists in the live BITFLUX app. BF Invest is shown as an honest "coming soon".
 
-Real features covered:
+## Claims policy (read before adding copy)
+Only state what we can prove. If unsure, leave it out.
+- **Registration:** the only one we hold is **FinCEN MSB, No. 31000328099115**
+  (BitFlux Limited, received 2026-04-17; source: `../bitflux文件/msb_registration -BitFlux Limited.pdf`).
+  It is a *registration*, not a license — never write "licensed" or "approved by FinCEN".
+  Renew every two years: **by 31 Dec 2028**.
+- **Removed on 2026-10-23** (template leftovers with no evidence): SFC / MSO / TCSP / FCA / VQF /
+  CMA / FSC / FSA / FSCA license badges, "10+ licenses · 8 jurisdictions · 173 countries",
+  "$150B / $60B partner network" metrics, SOC 2 / ISO 27001 / PCI DSS badges, the partner
+  name list, BF Earn, the demo investment return, "instant / in seconds / 7×24 / bank-grade".
+- Re-add a partner name only with a signed agreement; add the card issuer line
+  ("issued by … pursuant to a licence from Visa") once the issuer is confirmed.
+
+Real features covered (checked against `../测试报告-20260628`):
 - Multi-asset wallet (USDT / USD / BTC / ETH / USDC)
 - Currency Swap (USDT/USDC → USD)
-- BF Card (virtual + physical)
+- BF Card (Visa, virtual + physical)
 - Global fiat withdrawal (USD / SGD / HKD / GBP / EUR)
-- Multi-chain deposit & withdraw (ERC20 / BEP20 / TRC20 / Polygon)
+- Crypto deposit on ERC20 / BEP20 / TRC20 / Polygon; withdrawal on ERC20 / BEP20 / TRC20
 - Referral rewards (up to 10%)
 - Differentiators: tiered KYC limits, transaction history + real-time notifications,
   6-digit transaction PIN + new-device alerts, dark/light + multilingual + PWA
@@ -32,6 +43,9 @@ Pure static site — no build step, no backend, no dependencies. Multi-page:
 - `card.html` — **BF Card detail page**: card hero, three real card finishes
   (Golden / Black / Blue) and card benefits
 - `coming-soon.html` — branded "coming soon" page (used by BF Invest), dynamic product name
+- `privacy.html` / `terms.html` — Privacy Policy and Terms of Service. Both languages live in the
+  HTML (`.legal[data-legal="en|zh"]`); CSS shows the one matching `<html lang>`. English governs.
+  Drafted from common templates — have a lawyer review before relying on them.
 - `styles.css` — premium black-gold theme + 3D coin + **in-phone HTML/CSS app mockups** + inline SVG icons + full responsive layout
 - `app.js` — sticky nav, mobile menu, scroll-reveal, FAQ accordion, EN/中文 toggle, copy-link
 - `assets/` — `bitflux-logo.png`, `bitflux-favicon.png`, `bitflux-icon.png`,
@@ -65,6 +79,12 @@ Or just open `index.html` directly in a browser (file://).
 1. Add PNGs to `assets/screenshots/` (see that folder's README for the shot list).
 2. Tell the assistant — it will swap the CSS mockups for your real screenshots
    and/or add a dedicated app-preview gallery.
+
+## Legal entity footer
+Every page footer carries the legal entity block required for Apple Developer (organization)
+enrollment: **BitFlux Limited**, BVI Company No. 2189521, the Mong Kok office address and
+`info@bitflux.link`. It must match the D-U-N-S (D&B) record word for word — don't reword or
+translate the name or address. The footer is identical across all pages; edit them together.
 
 ## Customize
 - Brand colors: edit the `:root` CSS variables in `styles.css`.

@@ -265,17 +265,22 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter','PingFang SC',sans-serif;font-we
 
 /* footer */
 .footer{border-top:1px solid var(--line);padding:62px 0 28px;background:var(--bg-2)}
-.footer-inner{display:grid;grid-template-columns:1.5fr 2fr;gap:40px}
+.footer-inner{display:grid;grid-template-columns:1.2fr 2.6fr;gap:40px}
 .footer-brand img{height:26px;width:auto;margin-bottom:14px}
 .footer-brand p{color:var(--txt-mut);font-size:14px;margin-bottom:12px;max-width:300px;font-weight:300}
 .footer-tg{color:var(--gold-2);font-weight:600;font-size:14px}
-.footer-email{display:block;margin-top:8px;color:var(--txt-mut);font-size:14px;font-weight:300;transition:color .2s}
-.footer-email:hover{color:var(--gold-2)}
-.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .footer-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--txt-dim);margin-bottom:14px;font-weight:600}
 .footer-cols a{display:block;color:var(--txt-mut);font-size:14px;padding:5px 0;transition:color .2s;font-weight:300}
 .footer-cols a:hover{color:var(--gold-2)}
+/* legal entity block — must match the D&B record verbatim (Apple enrollment checks it) */
+.footer-company{margin-top:44px;padding-top:24px;border-top:1px solid var(--hair);font-size:13px;line-height:1.75;color:var(--txt-mut);font-weight:300}
+.footer-company .fc-name{font-family:'Space Grotesk','Inter',sans-serif;font-size:14px;font-weight:600;color:var(--txt);letter-spacing:.02em;margin-bottom:2px}
+.footer-company address{font-style:normal}
+.footer-company a{color:var(--gold-2);transition:color .2s}
+.footer-company a:hover{color:var(--txt)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:46px;padding-top:22px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--txt-dim);flex-wrap:wrap}
+.footer-company + .footer-bottom{margin-top:22px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(34px) scale(.985);filter:blur(6px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
@@ -827,3 +832,43 @@ body.cursor-on .cursor-glow{opacity:1}
 
 /* visible build tag in footer — check this to confirm you're on the latest version */
 .build-tag{font-family:'Space Grotesk';font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:999px;padding:2px 10px;letter-spacing:.04em}
+
+/* ===================== LEGAL PAGES (privacy / terms) ===================== */
+/* both language versions live in the HTML; app.js sets <html lang>, CSS shows the matching one */
+html[lang="zh-CN"] .legal[data-legal="en"],
+html:not([lang="zh-CN"]) .legal[data-legal="zh"]{display:none}
+.legal{max-width:760px;margin:0 auto;color:var(--txt-mut);font-size:15.5px;line-height:1.85;font-weight:400}
+.legal h2{font-size:20px;color:var(--txt);margin:46px 0 14px;font-weight:600;letter-spacing:-.005em}
+.legal h3{font-size:15px;color:var(--gold-2);margin:24px 0 8px;font-weight:600;letter-spacing:.01em}
+.legal p{margin-bottom:14px}
+.legal ul{margin:0 0 16px;padding-left:1.25em}
+.legal li{margin-bottom:8px;padding-left:4px}
+.legal li::marker{color:var(--gold)}
+.legal strong{color:var(--txt);font-weight:600}
+.legal a{color:var(--gold-2);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px;transition:text-decoration-color .2s}
+.legal a:hover{text-decoration-color:var(--gold-2)}
+.legal address{font-style:normal}
+.legal-lead{font-size:16.5px;color:var(--txt)}
+.legal-note{border:1px solid var(--line);background:rgba(200,163,91,.05);border-radius:14px;padding:12px 18px;font-size:14px;margin-bottom:28px}
+.legal-contact{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--bg-2));padding:20px 24px;margin-top:6px}
+@media(max-width:560px){
+  .legal{font-size:15px}
+  .legal h2{font-size:18px;margin-top:38px}
+  .legal-contact{padding:18px}
+}
+
+/* ===================== REGISTRATION (home #compliance, features #security) ===================== */
+/* only verified registrations go here — currently FinCEN MSB 31000328099115 */
+.reg{display:flex;align-items:center;justify-content:center;gap:44px;max-width:720px;margin:0 auto}
+.reg .cbadge{flex:none;width:170px}
+.reg-info{display:grid;gap:16px;margin:0}
+.reg-info dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-dim)}
+.reg-info dd{margin:2px 0 0;font-family:'Space Grotesk','Inter',sans-serif;font-size:17px;font-weight:500;color:var(--txt)}
+.reg-info a{color:var(--gold-2);transition:color .2s}
+.reg-info a:hover{color:var(--txt)}
+.reg-note{text-align:center;margin-top:30px;font-size:13px;color:var(--txt-dim)}
+.reg-line{text-align:center;max-width:640px;margin:64px auto 0;font-size:14px;color:var(--txt-mut);font-weight:300}
+.feat-note{text-align:center;margin-top:48px;font-size:12.5px;color:var(--txt-dim)}
+@media(max-width:560px){
+  .reg{flex-direction:column;gap:28px;text-align:center}
+}
