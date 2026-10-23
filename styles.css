@@ -152,7 +152,6 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter','PingFang SC',sans-serif;font-we
 .fcard .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
 .fcard .tags span{font-size:11px;color:var(--gold-2);background:rgba(200,163,91,.08);border:1px solid var(--line);padding:3px 9px;border-radius:999px;font-weight:500}
 
-.suite-note{text-align:center;font-size:12.5px;color:var(--txt-dim);margin-top:28px;font-weight:300}
 
 /* why / differentiator band */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -856,5 +855,3 @@ html:not([lang="zh-CN"]) .legal[data-legal="zh"]{display:none}
   .legal h2{font-size:18px;margin-top:38px}
   .legal-contact{padding:18px}
 }
-
-.feat-note{text-align:center;margin-top:48px;font-size:12.5px;color:var(--txt-dim)}

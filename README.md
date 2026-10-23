@@ -16,13 +16,15 @@ Only state what we can prove. If unsure, leave it out.
   CMA / FSC / FSA / FSCA license badges, "10+ licenses · 8 jurisdictions · 173 countries",
   "$150B / $60B partner network" metrics, SOC 2 / ISO 27001 / PCI DSS badges, the partner
   name list, BF Earn, the demo investment return, "instant / in seconds / 7×24 / bank-grade".
+- **Layout rule:** headings only, no gray description lines or footnotes under them (owner's call, 2026-10-23).
 - Re-add a partner name only with a signed agreement; add the card issuer line
   ("issued by … pursuant to a licence from Visa") once the issuer is confirmed.
 
 Real features covered (checked against `../测试报告-20260628`):
 - Multi-asset wallet (USDT / USD / BTC / ETH / USDC)
 - Currency Swap (USDT/USDC → USD)
-- BF Card (Visa, virtual + physical)
+- BF Card (virtual + physical). Card art shows Visa (Golden/Black) and Mastercard (Blue) —
+  network not confirmed, so the copy names neither
 - Global fiat withdrawal (USD / SGD / HKD / GBP / EUR)
 - Crypto deposit on ERC20 / BEP20 / TRC20 / Polygon; withdrawal on ERC20 / BEP20 / TRC20
 - Referral rewards (up to 10%)
