@@ -857,18 +857,4 @@ html:not([lang="zh-CN"]) .legal[data-legal="zh"]{display:none}
   .legal-contact{padding:18px}
 }
 
-/* ===================== REGISTRATION (home #compliance, features #security) ===================== */
-/* only verified registrations go here — currently FinCEN MSB 31000328099115 */
-.reg{display:flex;align-items:center;justify-content:center;gap:44px;max-width:720px;margin:0 auto}
-.reg .cbadge{flex:none;width:170px}
-.reg-info{display:grid;gap:16px;margin:0}
-.reg-info dt{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-dim)}
-.reg-info dd{margin:2px 0 0;font-family:'Space Grotesk','Inter',sans-serif;font-size:17px;font-weight:500;color:var(--txt)}
-.reg-info a{color:var(--gold-2);transition:color .2s}
-.reg-info a:hover{color:var(--txt)}
-.reg-note{text-align:center;margin-top:30px;font-size:13px;color:var(--txt-dim)}
-.reg-line{text-align:center;max-width:640px;margin:64px auto 0;font-size:14px;color:var(--txt-mut);font-weight:300}
 .feat-note{text-align:center;margin-top:48px;font-size:12.5px;color:var(--txt-dim)}
-@media(max-width:560px){
-  .reg{flex-direction:column;gap:28px;text-align:center}
-}

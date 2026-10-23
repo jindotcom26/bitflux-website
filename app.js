@@ -1,16 +1,13 @@
 /* ===================== BITFLUX site — interactions + i18n ===================== */
 (function () {
   'use strict';
-
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var raf = window.requestAnimationFrame || function (cb) { return setTimeout(cb, 16); };
-
   /* ---------- scroll progress bar ---------- */
   var progress = document.createElement('div');
   progress.className = 'scroll-progress';
   document.body.appendChild(progress);
-
   /* ---------- sticky nav + auto-hide + progress (single rAF loop) ---------- */
   var nav = document.getElementById('nav');
   var lastY = window.scrollY;
@@ -31,7 +28,6 @@
     if (!ticking) { ticking = true; raf(frame); }
   }, { passive: true });
   frame();
-
   /* ---------- mobile menu ---------- */
   var burger = document.getElementById('burger');
   var navMobile = document.getElementById('navMobile');
@@ -47,7 +43,6 @@
       });
     });
   }
-
   /* ---------- staggered scroll reveal ---------- */
   var revealEls = document.querySelectorAll('.reveal');
   revealEls.forEach(function (el) {
@@ -67,7 +62,6 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
-
   /* ---------- count-up numbers ---------- */
   function countUp(el) {
     var target = parseInt(el.getAttribute('data-count'), 10);
@@ -95,7 +89,6 @@
   } else {
     counters.forEach(countUp);
   }
-
   /* ---------- scrollspy: active nav link ---------- */
   var spyLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
   var spyMap = {};
@@ -117,7 +110,6 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     Object.keys(spyMap).forEach(function (id) { sio.observe(document.getElementById(id)); });
   }
-
   /* ---------- buttery momentum scroll (desktop, Lenis-lite) ---------- */
   var smooth = finePointer && !reduceMotion;
   var sTarget = window.scrollY, sCurrent = sTarget, sActive = false;
@@ -149,7 +141,6 @@
     window.addEventListener('touchstart', resync, { passive: true });
     window.addEventListener('resize', function () { sTarget = window.scrollY; });
   }
-
   /* ---------- in-page anchor smooth routing ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     var href = a.getAttribute('href');
@@ -163,7 +154,6 @@
       if (navMobile) { navMobile.classList.remove('open'); if (burger) burger.classList.remove('open'); }
     });
   });
-
   /* ---------- global cursor light ---------- */
   if (finePointer && !reduceMotion) {
     var glow = document.createElement('div');
@@ -182,7 +172,6 @@
     });
     window.addEventListener('mouseleave', function () { document.body.classList.remove('cursor-on'); });
   }
-
   /* ---------- hero parallax (mouse) ---------- */
   var hero = document.querySelector('.hero');
   var heroDevice = document.querySelector('.hero-device');
@@ -203,7 +192,6 @@
       else parking = false;
     }
   }
-
   /* ---------- spotlight follow on cards ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll('.fcard, .why-card, .preview-frame, .step').forEach(function (card) {
@@ -214,7 +202,6 @@
       });
     });
   }
-
   /* ---------- 3D tilt on BF cards ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll('.bfcard').forEach(function (card) {
@@ -227,7 +214,6 @@
       card.addEventListener('mouseleave', function () { card.style.transform = ''; });
     });
   }
-
   /* ---------- magnetic primary buttons ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll('.btn-primary').forEach(function (btn) {
@@ -240,7 +226,6 @@
       btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
     });
   }
-
   /* ---------- silky FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var q = item.querySelector('.faq-q');
@@ -260,7 +245,6 @@
       q.setAttribute('aria-expanded', String(!open));
     });
   });
-
   /* ---------- copy referral link ---------- */
   var copyRef = document.getElementById('copyRef');
   var refLink = document.getElementById('refLink');
@@ -282,7 +266,6 @@
       }
     });
   }
-
   /* ===================== i18n ===================== */
   var I18N = {
     zh: {
@@ -364,8 +347,6 @@
       tr4_t: '有问题，找我们', tr4_d: '通过邮箱或 Twitter 联系我们的团队。',
       ts1: '种支持资产', ts2: '条充值网络', ts3: '种法币提现', ts4: '最高邀请奖励',
       tr_more: '查看安全详情 →',
-      cp_eyebrow: '登记', cp_title: '已在 FinCEN 登记', cp_lead: 'BitFlux Limited 已在美国登记为货币服务业务（MSB）。',
-      cb1_c: '美国', cb1_n: '货币服务业务 (MSB)',
       cta_title: '让你的资产，真正流动起来', cta_sub: '开个账户，把加密货币变成可花的钱。', cta_b1: '立即开户', cta_b2: '关注 Twitter',
       foot_desc: '一站式加密与法币账户。把数字资产变成可花的钱。', foot_product: '功能', foot_invest: 'BF Invest（即将上线）',
       foot_resource: '资源', foot_support: '联系支持', foot_start: '开始', foot_login: '登录',
@@ -373,7 +354,7 @@
       foot_legal: '法律条款', foot_privacy: '隐私政策', foot_terms: '服务条款', foot_email_l: '邮箱：',
       foot_entity: '于英属维尔京群岛注册成立（公司编号 2189521），办公地址位于香港。',
       legal_updated: '最后更新：2026 年 10 月 23 日',
-      bxd_pill: '充值', bxd_t: '4 条网络充值', bxi_stat_v: '开发中', reg_name_l: '登记名称', reg_no_l: 'MSB 登记号', reg_check_l: '查验', reg_check: 'FinCEN MSB 登记查询 →', reg_note: 'MSB 登记不是牌照，FinCEN 也不为任何登记机构背书。', reg_line: 'BitFlux Limited 已在美国 FinCEN 登记为货币服务业务（MSB），登记号 31000328099115。', feat_note: '* 本页的 App 界面为示意图，数据仅为示例。',
+      bxd_pill: '充值', bxd_t: '4 条网络充值', bxi_stat_v: '开发中', feat_note: '* 本页的 App 界面为示意图，数据仅为示例。',
       title_home: 'BITFLUX · 把加密货币变成可花的钱',
       title_features: '功能详情 · BITFLUX',
       title_card: 'BF Card · BITFLUX',
@@ -479,8 +460,6 @@
       tr4_t: 'Help when you need it', tr4_d: 'Reach our team by email or on Twitter.',
       ts1: 'Supported assets', ts2: 'Deposit networks', ts3: 'Fiat withdrawal currencies', ts4: 'Max referral reward',
       tr_more: 'More on security →',
-      cp_eyebrow: 'Registration', cp_title: 'Registered with FinCEN', cp_lead: 'BitFlux Limited is registered in the United States as a Money Services Business (MSB).',
-      cb1_c: 'United States', cb1_n: 'Money Services Business (MSB)',
       cta_title: 'Put your assets in motion', cta_sub: 'Open an account and turn crypto into money you can spend.', cta_b1: 'Open account', cta_b2: 'Follow on Twitter',
       foot_desc: 'An all-in-one crypto and fiat account. Turn digital assets into money you can spend.', foot_product: 'Features', foot_invest: 'BF Invest (soon)',
       foot_resource: 'Resources', foot_support: 'Contact support', foot_start: 'Start', foot_login: 'Log in',
@@ -488,7 +467,7 @@
       foot_legal: 'Legal', foot_privacy: 'Privacy Policy', foot_terms: 'Terms of Service', foot_email_l: 'Email: ',
       foot_entity: 'Incorporated in the British Virgin Islands (Company No. 2189521), with its office in Hong Kong.',
       legal_updated: 'Last updated: 23 October 2026',
-      bxd_pill: 'Deposit', bxd_t: 'Deposit on 4 networks', bxi_stat_v: 'In development', reg_name_l: 'Registered name', reg_no_l: 'MSB registration no.', reg_check_l: 'Verify', reg_check: 'FinCEN MSB Registrant Search →', reg_note: 'MSB registration is not a license. FinCEN does not endorse any registered business.', reg_line: 'BitFlux Limited is registered with FinCEN (United States) as a Money Services Business. Registration no. 31000328099115.', feat_note: '* App screens on this page are illustrations with sample data.',
+      bxd_pill: 'Deposit', bxd_t: 'Deposit on 4 networks', bxi_stat_v: 'In development', feat_note: '* App screens on this page are illustrations with sample data.',
       title_home: 'BITFLUX · Turn crypto into money you can spend',
       title_features: 'Features · BITFLUX',
       title_card: 'BF Card · BITFLUX',
@@ -516,13 +495,11 @@
       mk_k_sec2: 'Current limits', mk_k_dep: 'Crypto deposit/day', mk_k_wd: 'Fiat withdrawal/day'
     }
   };
-
   var LANG = 'en';
   try {
     var saved = localStorage.getItem('bitflux_lang');
     if (saved === 'zh' || saved === 'en') LANG = saved;
   } catch (e) {}
-
   function applyLang(lang) {
     LANG = lang;
     var dict = I18N[lang] || I18N.zh;
@@ -545,7 +522,6 @@
     }
     try { localStorage.setItem('bitflux_lang', lang); } catch (e) {}
   }
-
   function bindLangToggle(id, closeMenu) {
     var btn = document.getElementById(id);
     if (!btn) return;
@@ -559,6 +535,5 @@
   }
   bindLangToggle('langToggle', false);
   bindLangToggle('langToggleMobile', true);
-
   applyLang(LANG);
 })();

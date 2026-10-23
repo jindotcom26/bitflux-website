@@ -10,7 +10,8 @@ Only state what we can prove. If unsure, leave it out.
 - **Registration:** the only one we hold is **FinCEN MSB, No. 31000328099115**
   (BitFlux Limited, received 2026-04-17; source: `../bitflux文件/msb_registration -BitFlux Limited.pdf`).
   It is a *registration*, not a license — never write "licensed" or "approved by FinCEN".
-  Renew every two years: **by 31 Dec 2028**.
+  Renew every two years: **by 31 Dec 2028**. Deliberately **not shown on the site**
+  (not needed for Apple enrollment; give the PDF to App Review directly if asked).
 - **Removed on 2026-10-23** (template leftovers with no evidence): SFC / MSO / TCSP / FCA / VQF /
   CMA / FSC / FSA / FSCA license badges, "10+ licenses · 8 jurisdictions · 173 countries",
   "$150B / $60B partner network" metrics, SOC 2 / ISO 27001 / PCI DSS badges, the partner
