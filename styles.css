@@ -829,8 +829,6 @@ body.cursor-on .cursor-glow{opacity:1}
   50%{opacity:.19;transform:scale(1.14)}
 }
 
-/* visible build tag in footer — check this to confirm you're on the latest version */
-.build-tag{font-family:'Space Grotesk';font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:999px;padding:2px 10px;letter-spacing:.04em}
 
 /* ===================== LEGAL PAGES (privacy / terms) ===================== */
 /* both language versions live in the HTML; app.js sets <html lang>, CSS shows the matching one */
