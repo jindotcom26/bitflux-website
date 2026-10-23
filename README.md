@@ -85,7 +85,7 @@ Or just open `index.html` directly in a browser (file://).
 
 ## Legal entity footer
 Every page footer carries the legal entity block required for Apple Developer (organization)
-enrollment: **BitFlux Limited**, BVI Company No. 2189521, the Mong Kok office address and
+enrollment: **BitFlux Limited**, the Mong Kok office address and
 `info@bitflux.link`. It must match the D-U-N-S (D&B) record word for word — don't reword or
 translate the name or address. The footer is identical across all pages; edit them together.
 
